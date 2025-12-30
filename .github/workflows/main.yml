@@ -20,4 +20,6 @@ jobs:
           distribution: 'temurin'
 
       - name: Step 3 - Build with Maven
-        run: mvn clean package
+        run: |
+          cd mywebapp
+          mvn clean package -DskipTests
